@@ -25,8 +25,6 @@ namespace ODataSample.Data.EntityTypeConfigurations
         .WithMany(ca => ca.CustomerActivities)
         .HasForeignKey(ca => ca.ActivityId);
 
-      builder.HasOne(ac => ac.Customer).WithMany(ac => ac.CustomerActivities).IsRequired();
-
       builder.HasData(
         new CustomerActivity { Id = 1, CustomerId = 1, ActivityId = 1 },
         new CustomerActivity { Id = 2, CustomerId = 1, ActivityId = 2 },

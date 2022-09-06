@@ -25,7 +25,7 @@ namespace ODataSample.Data.EntityTypeConfigurations
         .HasMaxLength(100)
         .IsRequired();
 
-      //builder.HasMany(c => c.CustomerActivities).WithOne(ca => ca.Customer).IsRequired();
+      builder.HasMany(c => c.CustomerActivities).WithOne(ca => ca.Customer).IsRequired();
 
       builder.HasData(
         new Customer { Id = 1, FirstName = "Hakan", LastName = "Altındiş", IsDeleted = false },
